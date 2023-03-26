@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex04</title>
+</head>
+<body>
+<script>
+    function ex04(arr) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            let count = 0;
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[i] === arr[j]) {
+                    count++;
+                }
+            }
+            if (count === 1) {
+                result.push(arr[i]);
+            }
+        }
+        document.write(result[0]);
+    }
+
+    let arr = prompt('Enter your array:').split(',');
+    ex04(arr);
+</script>
+</body>
+</html>

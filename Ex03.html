@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex03</title>
+</head>
+<body>
+<script>
+    function ex03(arr, sum) {
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = +arr[i];
+        }
+        let arr2 = [];
+        let arr3 = [];
+        let range = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] === sum) {
+                    arr2.push(arr[i]);
+                    arr3.push(arr[j]);
+                    range.push(j - i);
+                }
+            }
+        }
+        let index;
+        let min = range[0];
+        for (let i = 0; i < range.length; i++) {
+            if (range[i] < min) {
+                min = range[i];
+                index = i;
+            }
+        }
+        document.write(`${arr2[index]} and ${arr3[index]} <br>`);
+    }
+
+    ex03([1, 2, 3, 4, 5, 6, 0, 0, 6, 0], 3);
+    // Eror
+</script>
+</body>
+</html>

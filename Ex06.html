@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex06</title>
+</head>
+<body>
+<script>
+    function ex06(arr, k) {
+        arr.sort(function (a, b) {
+            return b - a;
+        })
+        document.write(arr[k - 1]);
+    }
+
+    let arr = prompt('Enter your array:').split(',');
+    let k = +prompt('Enter your k:');
+    ex06(arr, k);
+</script>
+</body>
+</html>
