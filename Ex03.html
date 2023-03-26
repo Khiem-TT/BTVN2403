@@ -22,19 +22,22 @@
                 }
             }
         }
-        let index;
         let min = range[0];
         for (let i = 0; i < range.length; i++) {
             if (range[i] < min) {
                 min = range[i];
-                index = i;
             }
         }
-        document.write(`${arr2[index]} and ${arr3[index]} <br>`);
+        for (let i = 0; i < range.length; i++) {
+            if (range[i] === min) {
+                document.write(`${arr2[i]} and ${arr3[i]} <br>`);
+            }
+        }
     }
 
-    ex03([1, 2, 3, 4, 5, 6, 0, 0, 6, 0], 3);
-    // Eror
+    let arr = prompt('Enter your array:').split(',');
+    let sum = +prompt('Enter your sum:');
+    ex03(arr, sum);
 </script>
 </body>
 </html>

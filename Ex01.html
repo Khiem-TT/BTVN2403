@@ -6,7 +6,22 @@
 </head>
 <body>
 <script>
+    function func(x) {
+        return x * x + 2 * x - 3;
+    }
 
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr.push(i);
+    }
+    let max = func(arr[0]);
+    for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i]) > max) {
+            max = func(arr[i]);
+            a = arr[i];
+        }
+    }
+    document.write(`The maximum value of the function x<sup>2</sup> + 2x - 3 is ${max} at x = ${a} in the interval (${arr})`);
 </script>
 </body>
 </html>
